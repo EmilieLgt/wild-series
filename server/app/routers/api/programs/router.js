@@ -5,17 +5,10 @@ const router = express.Router();
 /* ************************************************************************* */
 // Import And Use Routers Here
 /* ************************************************************************* */
-const { sayWelcome } = require("../../controllers/sayActions");
+const { browse } = require("../../../controllers/programsActions");
 
-router.get("/", sayWelcome);
-
-const itemsRouter = require("./items/router");
-
-router.use("/items", itemsRouter);
-
-const programsRouter = require("./programs/router");
-
-router.use("/programs", programsRouter);
+// Route to get a list of items
+router.get("/", browse);
 
 /* ************************************************************************* */
 
